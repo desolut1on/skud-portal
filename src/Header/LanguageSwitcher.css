@@ -1,0 +1,25 @@
+.language-switcher {
+    display: flex;
+    gap: 8px;
+    color: #4b5563;
+    font-weight: 500;
+  }
+  
+  .language-switcher span {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .language-switcher span:hover {
+    color: #2563eb;
+  }
+  
+  .language-switcher .active {
+    color: #2563eb;
+    font-weight: 600;
+  }
+  
+  .divider {
+    color: #d1d5db;
+    user-select: none;
+  }

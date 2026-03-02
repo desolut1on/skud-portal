@@ -1,0 +1,8 @@
+/* Только самые базовые стили */
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Подключим шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');

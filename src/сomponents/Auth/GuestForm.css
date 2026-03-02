@@ -1,0 +1,377 @@
+/* Основные стили формы гостя */
+.guest-form-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F3EBF6;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+.guest-form-container {
+  max-width: 850px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Кнопка закрытия - исправленная версия */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #8C55AA;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  background: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.close-btn:hover {
+  color: #6d3b85;
+  transform: rotate(90deg) scale(1.1);
+  background: rgba(140, 85, 170, 0.1);
+}
+
+.close-btn:active {
+  transform: rotate(90deg) scale(0.95);
+}
+
+/* Заголовок формы */
+.guest-form-container h1 {
+  text-align: center;
+  color: #8C55AA;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Остальные стили остаются без изменений */
+.tabs {
+  display: flex;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  justify-content: center;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #7f8c8d;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.tab:hover {
+  color: #8C55AA;
+}
+
+.tab.active {
+  color: #8C55AA;
+  font-weight: 600;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #9C27B0, #E040FB);
+  border-radius: 3px 3px 0 0;
+}
+
+.form-step, .review-step {
+  padding: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid #dfe6e9;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: rgba(243, 235, 246, 0.3);
+}
+
+input:focus, select:focus {
+  border-color: #8C55AA;
+  box-shadow: 0 0 0 3px rgba(140, 85, 170, 0.2);
+  outline: none;
+  background: white;
+}
+
+.date-input {
+  position: relative;
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8C55AA;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(243, 235, 246, 0.3);
+  transition: all 0.3s;
+}
+
+.checkbox-group:hover {
+  background: rgba(243, 235, 246, 0.5);
+}
+
+.checkbox-group input {
+  width: auto;
+  margin: 0;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+  display: block;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.btn {
+  padding: 0.85rem 1.75rem;
+  border-radius: 5em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #9C27B0, #E040FB);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #8C1FA5, #D81B60);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-back {
+  background: transparent;
+  color: #8C55AA;
+  border: 2px solid #8C55AA;
+}
+
+.btn-back:hover {
+  background: rgba(140, 85, 170, 0.1);
+  transform: translateY(-2px);
+}
+
+.review-data {
+  background: #f5f7fa;
+  padding: 1.75rem;
+  border-radius: 10px;
+  margin-bottom: 2.5rem;
+  border: 1px solid #dfe6e9;
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-item span {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.review-item strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.confirmation-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.4s;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #F3EBF6;
+}
+
+.success-message {
+  background: white;
+  padding: 3rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  animation: fadeInUp 0.6s;
+}
+
+.success-icon {
+  font-size: 3.5rem;
+  color: #27ae60;
+  margin-bottom: 1.5rem;
+}
+
+.success-message h2 {
+  color: #8C55AA;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+}
+
+.success-message p {
+  margin-bottom: 2.5rem;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.success-message .btn {
+  margin: 0 auto;
+}
+
+.privacy-link {
+  color: #8C55AA;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9em;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.privacy-link:hover {
+  color: #6d3b85;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .guest-form-container {
+    padding: 1.5rem;
+    margin: 20px auto;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .tabs {
+    justify-content: space-around;
+  }
+  
+  .tab {
+    padding: 0.75rem 1rem;
+  }
+}

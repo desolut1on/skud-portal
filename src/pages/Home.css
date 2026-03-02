@@ -1,0 +1,212 @@
+/* Основные стили остаются без изменений */
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F3EBF6;
+}
+
+.home-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-section {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero-section h1 {
+  color: #8C55AA;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.hero-section p {
+  color: #2D3748;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.auth-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.home-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5em;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.home-btn-primary {
+  background: linear-gradient(to right, #9C27B0, #E040FB);
+  color: white;
+}
+
+.home-btn-outline {
+  background: transparent;
+  border: 2px solid #8C55AA;
+  color: #8C55AA;
+}
+
+.home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Новые стили для виджета проверки статуса */
+.status-widget {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.status-widget h2 {
+  color: #8C55AA;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.search-status {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-status input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #E1BEE7;
+  border-radius: 5em;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  color: #8C55AA;
+  transition: all 0.3s;
+}
+
+.search-status input:focus {
+  outline: none;
+  border-color: #9C27B0;
+  box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.2);
+}
+
+.search-status button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #9C27B0, #E040FB);
+  color: white;
+  border: none;
+  border-radius: 5em;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-status button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-status button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.request-status {
+  background: #F9F5FF;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.status-icon {
+  font-size: 1.5rem;
+}
+
+.status-icon.pending {
+  color: #FFA500;
+}
+
+.status-icon.approved {
+  color: #4CAF50;
+}
+
+.status-icon.rejected {
+  color: #F44336;
+}
+
+.status-header h3 {
+  margin: 0;
+  color: #2D3748;
+  font-size: 1.25rem;
+}
+
+.request-details {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1rem;
+}
+
+.request-details strong {
+  color: #8C55AA;
+  font-weight: 500;
+}
+
+.error-message {
+  color: #E53935;
+  background: #FFEBEE;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.spinner {
+  border: 3px solid rgba(156, 39, 176, 0.1);
+  border-top: 3px solid #9C27B0;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.copied-notice {
+  color: #4CAF50;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}

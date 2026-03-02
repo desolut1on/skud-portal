@@ -1,0 +1,349 @@
+/* OperatorPanel.css */
+.operator-panel {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F3EBF6;
+  padding: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.operator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.operator-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #8C55AA;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user-email {
+  font-size: 0.9rem;
+  color: #9C27B0;
+  font-weight: normal;
+}
+
+.logout-btn {
+  background: linear-gradient(to right, #9C27B0, #E040FB);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+}
+
+.operator-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+  padding: 10px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tab-button {
+  background: #F3EBF6;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #8C55AA;
+  transition: all 0.3s;
+}
+
+.tab-button.active {
+  background: linear-gradient(to right, #9C27B0, #E040FB);
+  color: white;
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+}
+
+.tab-button:hover:not(.active) {
+  background: #E1BEE7;
+}
+
+.success-message {
+  background: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5em;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 0.3s;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.operator-content {
+  flex: 1;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+}
+
+.requests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.requests-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #8C55AA;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box {
+  position: relative;
+  min-width: 300px;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 20px 12px 45px;
+  border: 2px solid #E1BEE7;
+  border-radius: 5em;
+  font-size: 1rem;
+  color: #8C55AA;
+  transition: all 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #9C27B0;
+  box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9C27B0;
+}
+
+.requests-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.request-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  border-left: 5px solid;
+}
+
+.request-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.request-card.pending {
+  border-left-color: #FFA500;
+}
+
+.request-card.approved {
+  border-left-color: #4CAF50;
+}
+
+.request-card.rejected {
+  border-left-color: #F44336;
+}
+
+.request-header {
+  margin-bottom: 15px;
+}
+
+.request-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2D3748;
+}
+
+.request-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.request-approved {
+  color: #4CAF50;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.request-rejected {
+  color: #F44336;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.request-details {
+  margin-bottom: 15px;
+}
+
+.request-details p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4A5568;
+}
+
+.request-details strong {
+  color: #5E35B1;
+}
+
+.request-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.approve-button, .reject-button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+}
+
+.approve-button {
+  background: linear-gradient(to right, #4CAF50, #81C784);
+  color: white;
+}
+
+.approve-button:hover {
+  background: linear-gradient(to right, #388E3C, #66BB6A);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.reject-button {
+  background: linear-gradient(to right, #F44336, #E57373);
+  color: white;
+}
+
+.reject-button:hover {
+  background: linear-gradient(to right, #D32F2F, #EF5350);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+.create-pass-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.no-requests {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+  font-size: 1.1rem;
+  background: #F9F5FF;
+  border-radius: 15px;
+}
+
+.operator-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.spinner {
+  border: 4px solid rgba(156, 39, 176, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #9C27B0;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .operator-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .requests-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .search-box {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .requests-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

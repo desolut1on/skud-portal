@@ -1,0 +1,97 @@
+/* Основные стили шапки */
+.app-header {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стили логотипа и названия */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.02);
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.system-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+/* Стили кнопки пользователя (Переписано) */
+.user-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50px;      /* Фиксированная ширина для аватара */
+  height: 50px;     /* Фиксированная высота для аватара */
+  transition: transform 0.3s ease;
+}
+
+.user-button:hover {
+  transform: translateY(-2px);
+}
+
+.user-avatar,
+.register-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+  /*object-fit: cover;  object-fit может искажать изображение, если размеры контейнера не совпадают с пропорциями изображения */
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 1; /* Показываем аватар по умолчанию */
+}
+
+.register-icon {
+  width: 180px;  /* Сохраняем ширину иконки регистрации */
+  height: auto;   /* Сохраняем высоту иконки регистрации */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;     /* Скрываем иконку регистрации по умолчанию */
+}
+
+.user-button:hover .user-avatar {
+  opacity: 0; /* Скрываем аватар при наведении */
+}
+
+.user-button:hover .register-icon {
+  opacity: 1; /* Показываем иконку регистрации при наведении */
+}

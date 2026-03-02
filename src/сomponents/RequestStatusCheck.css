@@ -1,0 +1,142 @@
+.status-check-btn {
+    background: #8C55AA;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5em;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .status-check-btn:hover {
+    background: #7B4799;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .request-status-container {
+    padding: 1.5rem;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .request-status-container h2 {
+    color: #8C55AA;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .input-group input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5em;
+    font-size: 1rem;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #8C55AA;
+    box-shadow: 0 0 0 2px rgba(140, 85, 170, 0.2);
+  }
+  
+  .check-btn {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    color: white;
+    border: none;
+    border-radius: 5em;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .check-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .check-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #F44336;
+    background: #FFEBEE;
+    padding: 0.75rem;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .status-details {
+    background: #F9F5FF;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border: 1px solid #E1BEE7;
+  }
+  
+  .status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #E1BEE7;
+  }
+  
+  .status-header h3 {
+    color: #5D3587;
+    margin: 0;
+  }
+  
+  .status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+  
+  .status-badge.approved {
+    background: #E8F5E9;
+    color: #2E7D32;
+  }
+  
+  .status-badge.pending {
+    background: #FFF8E1;
+    color: #FF8F00;
+  }
+  
+  .status-badge.rejected {
+    background: #FFEBEE;
+    color: #C62828;
+  }
+  
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem 0;
+  }
+  
+  .detail-row span:first-child {
+    font-weight: 500;
+    color: #5D3587;
+  }
+  
+  .detail-row span:last-child {
+    text-align: right;
+    max-width: 60%;
+    word-break: break-word;
+  }
